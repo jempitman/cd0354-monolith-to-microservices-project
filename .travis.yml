@@ -20,7 +20,7 @@ script:
   
   # Docker compose 
   # Remove unused and dangling images
-  - docker image prune --all
+  # - docker image prune --all
 
   - docker-compose -f docker-compose-build.yaml build --parallel
 
