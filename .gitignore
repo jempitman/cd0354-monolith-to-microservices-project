@@ -42,3 +42,8 @@ venv/
 !.elasticbeanstalk/*.global.yml
 
 set_env.sh
+
+#Kubernetes environment variable files
+aws-secret.yaml
+env-configmap.yaml
+env-secret.yaml
