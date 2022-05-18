@@ -20,7 +20,7 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            memory: "64Mi"
+            memory: "1024Mi"
             cpu: "250m"
           limits:
             memory: "2048Mi"
@@ -63,6 +63,11 @@ spec:
               configMapKeyRef:
                 name: env-config
                 key: POSTGRES_HOST
+          - name: POSTGRES_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: env-config
+                key: POSTGRES_PORT
           - name: POSTGRES_USERNAME
             valueFrom:
               secretKeyRef:
