@@ -25,8 +25,8 @@ spec:
           limits:
             memory: "2048Mi"
             cpu: "500m"
-        # ports:
-        # - containerPort: 8001
+        ports:
+        - containerPort: 80
         env:
           - name: URL
             valueFrom:
