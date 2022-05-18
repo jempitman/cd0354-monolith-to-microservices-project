@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-feed
   labels:
     app: backend-feed
+  name: backend-feed
 spec:
   replicas: 1
   selector:
@@ -15,8 +15,8 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - name: backend-feed
-        image: jempitman/udagram-api-feed:v1
+      - image: jempitman/udagram-api-feed:v1
+        name: backend-feed
         imagePullPolicy: Always
         resources:
           requests:
@@ -25,6 +25,8 @@ spec:
           limits:
             memory: "2048Mi"
             cpu: "500m"
+        # ports:
+        # - containerPort: 8001
         env:
           - name: URL
             valueFrom:
