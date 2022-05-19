@@ -15,7 +15,7 @@ spec:
         app: reverseproxy
     spec:
       containers:
-      - image: jempitman/reverseproxy:v1
+      - image: jempitman/reverseproxy:v3
         name: reverseproxy
         imagePullPolicy: Always
         resources:
