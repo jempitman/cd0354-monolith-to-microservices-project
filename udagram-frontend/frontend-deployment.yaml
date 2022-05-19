@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: jempitman/udagram-frontend:v1
+        image: jempitman/udagram-frontend:v7
         imagePullPolicy: Always
         resources:
           requests:
