@@ -33,8 +33,8 @@ script:
   #image tagging
   - docker tag udagram-api-feed jempitman/udagram-api-feed:v1
   - docker tag udagram-api-user jempitman/udagram-api-user:v1
-  - docker tag udagram-frontend jempitman/udagram-frontend:v1
-  - docker tag reverseproxy jempitman/reverseproxy:v1
+  - docker tag udagram-frontend jempitman/udagram-frontend:v9
+  - docker tag reverseproxy jempitman/reverseproxy:v2
 
 after_success:
   #login
@@ -43,5 +43,5 @@ after_success:
   #push images to DockerHub
   - docker push jempitman/udagram-api-feed:v1
   - docker push jempitman/udagram-api-user:v1
-  - docker push jempitman/udagram-frontend:v1
-  - docker push jempitman/reverseproxy:v1
+  - docker push jempitman/udagram-frontend:v9
+  - docker push jempitman/reverseproxy:v2
